@@ -48,7 +48,7 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-xl md:text-2xl font-bold text-cyan-400">
-          <button onClick={() => handleNavClick("home")}>Emmanuel</button>
+          <button onClick={() => handleNavClick("home")}>Okediji Emmanuel</button>
         </h1>
 
         {/* Desktop Links */}
