@@ -24,7 +24,7 @@ const Projects = () => {
   return (
     <motion.section
       id="projects"
-      className="bg-gray-950 text-white py-24 px-6 text-center"
+      className="bg-gray-950 text-white py-24 md:py-48 px-6 text-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

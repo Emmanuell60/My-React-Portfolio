@@ -9,14 +9,14 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div className="bg-black text-white font-sans">
+    <div className="scroll-smooth bg-black text-white font-sans">
       <Navbar />
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Hero id="home" />
+        <About id="about" />
+        <Skills id="skills" />
+        <Projects id="projects" />
+        <Contact id="contact" />
         <Footer />
         <ScrollToTop />
       </main>

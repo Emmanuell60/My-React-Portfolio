@@ -4,7 +4,7 @@ const About = () => {
   return (
     <motion.section
       id="about"
-      className="py-24 px-6 bg-gray-950 text-gray-300 text-center"
+      className="py-24 md:py-48 px-6 bg-gray-950 text-gray-300 text-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

@@ -79,6 +79,7 @@ const Contact = () => {
             type="text"
             name="name"
             placeholder="Your Name"
+            autoComplete="name"
             required
             className="w-full px-4 py-3 rounded-xl bg-gray-800 text-white placeholder-gray-400 border border-gray-600 autofill:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400"
           />
@@ -88,6 +89,7 @@ const Contact = () => {
             type="email"
             name="email"
             placeholder="Your Email"
+            autoComplete="email"
             required
             className="w-full px-4 py-3 rounded-xl bg-gray-800 text-white placeholder-gray-400 border border-gray-600 autofill:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400"
           />
@@ -97,6 +99,7 @@ const Contact = () => {
             name="message"
             rows="5"
             placeholder="Your Message"
+            autoComplete="off"
             required
             className="w-full px-4 py-3 rounded-xl bg-gray-800 text-white placeholder-gray-400 border border-gray-600 autofill:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-400"
           ></textarea>

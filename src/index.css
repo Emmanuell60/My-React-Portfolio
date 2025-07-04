@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 48px; /* Adjust if navbar height is different */
+
 }
 
 input:-webkit-autofill,
@@ -12,3 +14,4 @@ textarea:-webkit-autofill {
   -webkit-text-fill-color: #fff !important;
   box-shadow: 0 0 0px 1000px #1f2937 inset !important; /* bg-gray-800 */
 }
+
