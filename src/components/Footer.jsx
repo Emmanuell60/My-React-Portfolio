@@ -12,7 +12,7 @@ const Footer = () => {
 
       <div className="flex justify-center space-x-6 text-lg">
         <a
-          href="https://github.com/emmanuelokediji9"
+          href="https://github.com/Emmanuell60"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-cyan-400 hover:scale-125 transition-transform duration-300"
