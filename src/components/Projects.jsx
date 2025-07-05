@@ -1,22 +1,22 @@
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiExpress } from "react-icons/si";
+import { SiMongodb, SiExpress, SiTailwindcss, SiMysql } from "react-icons/si";
 
 const projects = [
   {
     title: "Portfolio Website",
     description: "My personal developer portfolio built with React and Tailwind CSS.",
-    tech: [<FaReact />, <SiExpress />, <FaNodeJs />, <SiMongodb />],
+    tech: [<FaReact />, <SiTailwindcss />],
   },
   {
     title: "Blog App",
-    description: "A full-stack blog platform using the MERN stack with rich text editing.",
-    tech: [<FaReact />, <SiExpress />, <FaNodeJs />, <SiMongodb />],
+    description: "A full-stack blog platform built with React, Node.js, Express, and MySQL, featuring rich text editing.",
+    tech: [<FaReact />, <SiExpress />, <FaNodeJs />, <SiMysql />],
   },
   {
     title: "Task Manager",
-    description: "An intuitive task tracker with authentication and MongoDB backend.",
-    tech: [<FaReact />, <SiExpress />, <FaNodeJs />, <SiMongodb />],
+    description: "An intuitive task tracker with authentication, powered by a MySQL backend.",
+    tech: [<FaReact />, <SiExpress />, <FaNodeJs />, <SiMysql />],
   },
 ];
 
