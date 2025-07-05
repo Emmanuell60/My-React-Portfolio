@@ -77,7 +77,7 @@ const Hero = () => {
               Software Developer
             </p>
             <p className="text-gray-300 text-lg">
-              I helping teams build fast, reliable, and scalable web applications, using modern full-stack technologies and clean, maintainable code.
+              I help teams build fast, reliable, and scalable web applications, using modern full-stack technologies and clean, maintainable code.
               {/* I help teams deliver faster, safer, and more scalable software — through automation, monitoring, and cloud-native practices. */}
             </p>
           </motion.div>
