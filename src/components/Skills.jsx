@@ -8,7 +8,8 @@ import {
   SiWebpack, SiBabel,
   SiMysql,
   SiPostgresql,
-  SiVscodium
+  SiVscodium,
+  SiSupabase
 } from "react-icons/si";
 
 const categories = [
@@ -28,15 +29,15 @@ const categories = [
     skills: [
       { name: "Node.js", icon: FaNodeJs },
       { name: "Express.js", icon: SiExpress },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "GraphQL", icon: SiGraphql },
+      // { name: "Next.js", icon: SiNextdotjs },
+      // { name: "GraphQL", icon: SiGraphql },
     ],
   },
   {
     title: "Database",
     skills: [
       { name: "MySQL", icon: SiMysql },
-      { name: "Firebase", icon: SiFirebase },
+      { name: "Supabase", icon: SiSupabase },
       { name: "PostgreSQL", icon: SiPostgresql },
     ],
   },
