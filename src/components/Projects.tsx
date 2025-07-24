@@ -1,27 +1,54 @@
-/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss, SiMysql } from "react-icons/si";
+import {
+  SiMongodb,
+  SiExpress,
+  SiTailwindcss,
+  SiMysql,
+} from "react-icons/si";
+import { ReactElement } from "react";
 
-const projects = [
+type SectionProps = {
+  id: string;
+};
+
+interface Project {
+  title: string;
+  description: string;
+  tech: ReactElement[];
+}
+
+const projects: Project[] = [
   {
     title: "Portfolio Website",
     description: "My personal developer portfolio built with React and Tailwind CSS.",
-    tech: [<FaReact />, <SiTailwindcss />],
+    tech: [<FaReact key="react" />, <SiTailwindcss key="tailwind" />],
   },
   {
     title: "Blog App",
-    description: "A full-stack blog platform built with React, Node.js, Express, and MySQL, featuring rich text editing.",
-    tech: [<FaReact />, <SiExpress />, <FaNodeJs />, <SiMysql />],
+    description:
+      "A full-stack blog platform built with React, Node.js, Express, and MySQL, featuring rich text editing.",
+    tech: [
+      <FaReact key="react" />,
+      <SiExpress key="express" />,
+      <FaNodeJs key="node" />,
+      <SiMysql key="mysql" />,
+    ],
   },
   {
     title: "Task Manager",
-    description: "An intuitive task tracker with authentication, powered by a MySQL backend.",
-    tech: [<FaReact />, <SiExpress />, <FaNodeJs />, <SiMysql />],
+    description:
+      "An intuitive task tracker with authentication, powered by a MySQL backend.",
+    tech: [
+      <FaReact key="react" />,
+      <SiExpress key="express" />,
+      <FaNodeJs key="node" />,
+      <SiMysql key="mysql" />,
+    ],
   },
 ];
 
-const Projects = () => {
+const Projects = ({ id }: SectionProps) => {
   return (
     <motion.section
       id="projects"

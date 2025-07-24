@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-950 text-gray-300 py-8 text-center text-sm border-t border-gray-800">
       <div className="mb-3">

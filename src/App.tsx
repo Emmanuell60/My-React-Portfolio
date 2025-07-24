@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,7 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="scroll-smooth bg-black text-white font-sans">
       <Navbar />
@@ -22,6 +23,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;

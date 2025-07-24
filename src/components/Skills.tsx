@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import {
-  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaGitlab, FaAws, FaDocker, FaTools
+  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaAws, FaDocker, FaTools
 } from "react-icons/fa";
 import {
   SiJavascript, SiTailwindcss, SiBootstrap, SiExpress, SiNextdotjs,
@@ -12,8 +11,23 @@ import {
   SiVscodium,
   SiSupabase
 } from "react-icons/si";
+import { IconType } from "react-icons";
 
-const categories = [
+interface Skill {
+  name: string;
+  icon: IconType;
+}
+
+interface Category {
+  title: string;
+  skills: Skill[];
+}
+
+type SectionProps = {
+  id: string;
+};
+
+const categories: Category[] = [
   {
     title: "Frontend",
     skills: [
@@ -30,8 +44,6 @@ const categories = [
     skills: [
       { name: "Node.js", icon: FaNodeJs },
       { name: "Express.js", icon: SiExpress },
-      // { name: "Next.js", icon: SiNextdotjs },
-      // { name: "GraphQL", icon: SiGraphql },
     ],
   },
   {
@@ -75,7 +87,7 @@ const categories = [
   },
 ];
 
-const Skills = () => {
+const Skills = ({ id }: SectionProps) => {
   return (
     <motion.section
       id="skills"

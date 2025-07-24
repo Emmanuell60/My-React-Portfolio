@@ -1,22 +1,23 @@
-/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
-const Contact = () => {
-  const [status, setStatus] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
+type SectionProps = {
+  id: string;
+};
 
-  const audioRef = useRef(null); // for sound
+const Contact = ({ id }: SectionProps) => {
+  const [status, setStatus] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [showSuccess, setShowSuccess] = useState<boolean>(false);
+
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     if (showSuccess) {
-      // Play sound
       if (audioRef.current) {
         audioRef.current.play().catch(() => {});
       }
 
-      // Auto-hide after 4 seconds
       const timer = setTimeout(() => {
         setShowSuccess(false);
         setStatus("");
@@ -26,13 +27,13 @@ const Contact = () => {
     }
   }, [showSuccess]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus("");
     setShowSuccess(false);
 
-    const form = e.target;
+    const form = e.currentTarget;
     const data = new FormData(form);
 
     try {
@@ -51,7 +52,7 @@ const Contact = () => {
       } else {
         setStatus("Oops! Something went wrong.");
       }
-    } catch (err) {
+    } catch {
       setStatus("An error occurred. Please try again.");
     }
 
@@ -71,10 +72,7 @@ const Contact = () => {
         Contact Me
       </h2>
 
-      <form
-        className="max-w-2xl mx-auto space-y-6"
-        onSubmit={handleSubmit}
-      >
+      <form className="max-w-2xl mx-auto space-y-6" onSubmit={handleSubmit}>
         <div>
           <input
             type="text"
@@ -98,7 +96,7 @@ const Contact = () => {
         <div>
           <textarea
             name="message"
-            rows="5"
+            rows={5}
             placeholder="Your Message"
             autoComplete="off"
             required
@@ -152,7 +150,7 @@ const Contact = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth={2}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
@@ -179,7 +177,6 @@ const Contact = () => {
         )}
       </form>
 
-      {/* 🔊 Hidden audio for success */}
       <audio ref={audioRef} preload="auto">
         <source
           src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3"

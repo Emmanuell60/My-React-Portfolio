@@ -1,5 +1,8 @@
-/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+
+type SectionProps = {
+  id: string;
+};
 
 const container = {
   hidden: {},
@@ -19,10 +22,10 @@ const item = {
   },
 };
 
-const About = () => {
+const About = ({ id }: SectionProps) => {
   return (
     <section
-      id="about"
+      id={id}
       className="py-24 md:py-48 px-6 bg-gray-950 text-gray-300 text-center"
     >
       <motion.div
@@ -30,7 +33,7 @@ const About = () => {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }} // 0.3 = 30% in view triggers
+        viewport={{ once: true, amount: 0.3 }}
       >
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-cyan-400 mb-6"

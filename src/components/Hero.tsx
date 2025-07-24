@@ -1,14 +1,13 @@
-/* eslint-disable no-unused-vars */
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Particles from "react-tsparticles";
+import { Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 import { motion } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { useState, useEffect } from "react";
 
-const Hero = () => {
-  const [text, setText] = useState("");
-  const [typingDone, setTypingDone] = useState(false);
+const Hero: React.FC<{ id?: string }> = ({ id = "home" }) => {
+  const [text, setText] = useState<string>("");
+  const [typingDone, setTypingDone] = useState<boolean>(false);
 
   const fullName = "Okediji Emmanuel";
 
@@ -26,13 +25,13 @@ const Hero = () => {
     }
   }, [typedText]);
 
-  const particlesInit = useCallback(async (engine) => {
+  const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
 
   return (
     <motion.section
-      id="home"
+      id={id}
       className="relative min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -79,13 +78,12 @@ const Hero = () => {
             </p>
             <p className="text-gray-300 text-lg">
               I help teams build fast, reliable, and scalable web applications, using modern full-stack technologies and clean, maintainable code.
-              {/* I help teams deliver faster, safer, and more scalable software — through automation, monitoring, and cloud-native practices. */}
             </p>
           </motion.div>
         )}
       </div>
     </motion.section>
-  )
+  );
 };
 
 export default Hero;

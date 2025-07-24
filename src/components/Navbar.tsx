@@ -1,12 +1,16 @@
-/* eslint-disable no-unused-vars */
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+type NavLink = {
+  href: string;
+  label: string;
+};
 
-  const navLinks = [
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const navLinks: NavLink[] = [
     { href: "home", label: "Home" },
     { href: "about", label: "About" },
     { href: "skills", label: "Skills" },
@@ -14,7 +18,7 @@ const Navbar = () => {
     { href: "contact", label: "Contact" },
   ];
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (!element) return;
 
@@ -25,12 +29,12 @@ const Navbar = () => {
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 
-  const handleNavClick = (id) => {
+  const handleNavClick = (id: string) => {
     if (isOpen) {
       setIsOpen(false);
       setTimeout(() => {
         scrollToSection(id);
-      }, 300); // Wait for menu to close animation
+      }, 300);
     } else {
       scrollToSection(id);
     }
@@ -49,7 +53,9 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-xl md:text-2xl font-bold text-cyan-400">
-          <button onClick={() => handleNavClick("home")}>Okediji Emmanuel</button>
+          <button onClick={() => handleNavClick("home")}>
+            Okediji Emmanuel
+          </button>
         </h1>
 
         {/* Desktop Links */}

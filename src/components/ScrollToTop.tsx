@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-const ScrollToTop = () => {
-  const [visible, setVisible] = useState(false);
+const ScrollToTop: React.FC = () => {
+  const [visible, setVisible] = useState<boolean>(false);
 
   useEffect(() => {
     const toggleVisible = () => {
