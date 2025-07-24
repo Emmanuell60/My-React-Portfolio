@@ -44,7 +44,7 @@ const About = () => {
             I'm a passionate software developer with a strong focus on building dynamic, user-centered web applications. My primary stack includes MySQL, Express.js, React, and Node.js, a powerful combination that allows me to create fast, scalable, and maintainable full-stack applications.
           </motion.p>
 
-          <motion.p className="mb-6" variants={item}> I Take pride in writing clean, efficient code and designing intuitive user interfaces that solve real-world problems. Whether it's developing backend APIs, managing databases, or building responsive frontend components, I enjoy every step of the development process.
+          <motion.p className="mb-6" variants={item}>
             I take pride in writing clean, efficient code and designing intuitive user interfaces that solve real-world problems. Whether it's developing backend APIs, managing databases, or building responsive frontend components, I enjoy every step of the development process.
           </motion.p>
 
