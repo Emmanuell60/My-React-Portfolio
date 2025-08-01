@@ -44,15 +44,15 @@ const About = ({ id }: SectionProps) => {
 
         <div className="text-lg leading-relaxed text-left">
           <motion.p className="mb-6" variants={item}>
-            I'm a passionate software developer with a strong focus on building dynamic, user-centered web applications. My primary stack includes MySQL, Express.js, React, and Node.js, a powerful combination that allows me to create fast, scalable, and maintainable full-stack applications.
+            I'm a passionate Full-Stack Software Developer specializing in building dynamic, user-focused web applications. My core tech stack includes TypeScript, React, Node.js (Express), and PostgreSQL — tools I use to create fast, scalable, and maintainable solutions.
           </motion.p>
 
           <motion.p className="mb-6" variants={item}>
-            I take pride in writing clean, efficient code and designing intuitive user interfaces that solve real-world problems. Whether it's developing backend APIs, managing databases, or building responsive frontend components, I enjoy every step of the development process.
+            I love writing clean, efficient code and crafting intuitive, responsive interfaces that solve real-world problems. Whether it's designing backend APIs, managing data with relational databases, or developing sleek frontend experiences, I enjoy every part of the development journey.
           </motion.p>
 
           <motion.p variants={item}>
-            Driven by curiosity and a desire to grow, I'm always exploring new technologies, refining my skills, and seeking out opportunities to push the boundaries of what’s possible on the web.
+            I'm constantly learning, experimenting with new technologies, and pushing the limits of what's possible on the web.
           </motion.p>
         </div>
       </motion.div>
